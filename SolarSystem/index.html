@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Sistema Solar</title>
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+	<header>
+		<h1>Calcular o peso de um objeto no Sistema Solar</h1>
+
+		<input type="number" id="massa" placeholder="Massa em Quilogramas" />
+		<select id="opcaoSelecionada" onchange="document.getElementById('preview').src = this.value">
+			<option value='./images/earth.png'>Terra</option>
+            <option value='./images/jupiter.png'>Júpiter</option>
+            <option value='./images/mars.png'>Marte</option>
+            <option value='./images/mercury.png'>Mercúrio</option>
+            <option value='./images/moon.png'>Lua</option>
+            <option value='./images/neptune.png'>Netuno</option>
+            <option value='./images/pluto.png'>Plutão</option>
+            <option value='./images/saturn.png'>Saturno</option>
+            <option value='./images/uranus.png'>Urano</option>
+            <option value='./images/venus.png'>Vênus</option>
+		</select>
+		<button onclick=calcularPeso()>Calcular peso</button>
+
+	</header>
+	<main>
+		<div class="flex-container">
+			<div class="flex-image">
+				<img id='preview' src="./images/earth.png" class="planet-image"/>
+			</div>
+			<div class="flex-item">
+                <h1 class="flex-item result" id="resultado"></h1>
+            </div>
+		</div>
+        
+	</main>
+	<script src="./scripts/main.js"></script>
+</body>
+
+</html>
